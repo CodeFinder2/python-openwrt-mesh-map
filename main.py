@@ -13,7 +13,7 @@ import socket
 from mesh_nodes import mesh_nodes
 
 # ⚙️ Options
-ENABLE_IPERF3_TESTS = True   # → True = iperf3 measurement active
+ENABLE_IPERF3_TESTS = False   # → True = iperf3 measurement active
 IPERF_DURATION = 5           # Duration of iperf3 test in seconds
 
 mac_ip_map = {}        # mac → ip
@@ -290,7 +290,10 @@ nx.draw_networkx_labels(G, pos, labels, font_size=8)
 for (u, v), style in zip(G.edges(), edge_styles):
     nx.draw_networkx_edges(G, pos, edgelist=[(u, v)], style=style, width=1.5)
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=7)
-plt.title("Mesh network with clients and link quality (incl. iperf3 & ping)")
+title = "Mesh network with clients and link quality"
+if ENABLE_IPERF3_TESTS:
+    title += " (incl. iperf3 & ping)"
+plt.title(title)
 plt.axis("off")
 plt.tight_layout()
 plt.savefig("mesh_network_with_links.pdf", dpi=300)
