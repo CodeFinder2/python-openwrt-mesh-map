@@ -1,5 +1,5 @@
 # Overview
-Creates a map of a all OpenWrt mesh nodes and clients connected via WiFi using paramiko (SSH), matplotlib and networkx, and adds information (signal strength, throughput and latency) to the mesh links. Client links only have signal strength (%). Requires Python v3.
+Creates a map of a all OpenWrt mesh nodes and clients connected via WiFi using paramiko (SSH), matplotlib and networkx, and adds information (signal strength, throughput and latency) to the mesh links. Client links only have signal strength (%). Requires Python v3. Hopefully, this helps in setting up a better mesh topology.
 
 To use this:
 - Clone this repo: `git clone git@github.com:CodeFinder2/python-openwrt-mesh-map.git && cd python-openwrt-mesh-map`.
