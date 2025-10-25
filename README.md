@@ -3,7 +3,7 @@ Creates a map of OpenWrt mesh nodes and clients connected via WiFi using paramik
 
 To use this:
 - Clone this repo: `git clone git@github.com:CodeFinder2/python-openwrt-mesh-map.git && cd python-openwrt-mesh-map`.
-- Create a virtual environment: `python3 -v venv env && source env/bin/activate`.
+- Create a virtual environment: `python3 -m venv env && source env/bin/activate`.
 - Install dependencies: `pip install -r requirements.txt`.
 - Add your router setup (hostnames, username, passwords) in `mesh_nodes.py`. To use SSH keys, set an empty password.
 - Run `python main.py` and wait for the resulting diagram. You must be connected to one of the routers.
